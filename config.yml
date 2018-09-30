@@ -92,6 +92,7 @@ homebrew_cask_apps:
   - imagealpha
   - imageoptim
   - java
+  - jetbrains-toolbox
   - jdownloader
   - keka
   - little-snitch
@@ -103,7 +104,6 @@ homebrew_cask_apps:
   - openemu
   - osxfuse
   - parallels-desktop
-  - phpstorm
   - poedit
   - qlcolorcode
   - qlimagesize
