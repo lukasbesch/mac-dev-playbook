@@ -68,6 +68,7 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - 1password
+  - ableton-live-suite
   - arq
   - atom
   - bartender
@@ -95,11 +96,15 @@ homebrew_cask_apps:
   - jetbrains-toolbox
   - jdownloader
   - keka
+  - keepingyouawake
+  - libreoffice
   - little-snitch
   - macdown
   - macvim
+  - microsoft-office
   - micro-snitch
   - minikube
+  - moneymoney
   - mosaic
   - openemu
   - osxfuse
@@ -127,6 +132,7 @@ homebrew_cask_apps:
   - timings
   - transmission
   - transmit
+  - transmit-disk
   - tunnelblick
   - ubersicht
   - vagrant
