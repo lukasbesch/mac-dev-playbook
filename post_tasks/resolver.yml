@@ -1,0 +1,30 @@
+---
+- name: Ensure /etc/resolver directory exists.
+  file:
+    path: /etc/resolver
+    state: directory
+  become: yes
+
+- name: Add resolver for dev TLD .{{ item }}
+  blockinfile:
+    path: /etc/resolver/{{ item }}
+    create: true
+    line: nameserver 127.0.0.1
+  with_items:
+    - docker
+    - localhost
+    - test
+    - example
+
+- name: Resolve dev TLDs with dnmasq
+  blockinfile:
+    path: /usr/local/etc/dnsmasq.conf
+    create: true
+    insertafter: "/address=/double-click.net/127.0.0.1/"
+    block: |
+      address=/.{{ item }}/127.0.0.1
+  with_items:
+    - docker
+    - localhost
+    - test
+    - example
