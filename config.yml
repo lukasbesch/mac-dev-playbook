@@ -182,4 +182,4 @@ pip_packages: []
   #   version: "0.16.3" # default: N/A
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
-post_provision_tasks: []
+post_provision_tasks: post_tasks/*.yml
