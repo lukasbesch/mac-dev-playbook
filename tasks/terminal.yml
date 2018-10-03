@@ -29,3 +29,6 @@
   git:
     repo=https://github.com/robbyrussell/oh-my-zsh
     dest=~/.oh-my-zsh
+
+- name: Install NVM stable
+  shell: nvm install stable
