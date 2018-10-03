@@ -19,3 +19,21 @@
     - defaults write com.apple.terminal 'Startup Window Settings' -string JJG-Term
   changed_when: false
   when: "'JJG-Term' not in terminal_theme.stdout"
+
+- name: Installing Zsh and git
+  homebrew:
+    name: zsh
+    state: latest
+
+- name: Cloning oh-my-zsh
+  git:
+    repo=https://github.com/robbyrussell/oh-my-zsh
+    dest=~/.oh-my-zsh
+  sudo: no
+
+# - name: Ensure .nvm directory exists
+#   file:
+#     path: $HOME/.nvm
+#     state: directory
+# - name: Installing nvm
+#   shell: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash

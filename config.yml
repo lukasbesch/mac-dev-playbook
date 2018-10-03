@@ -6,60 +6,62 @@ configure_sudoers: yes
 configure_terminal: yes
 configure_osx: yes
 
-dotfiles_repo: https://github.com/lukasbesch/dotfiles.git
+dotfiles_repo: ~/Library/Mobile Documents/com~apple~CloudDocs/Git/dotfiles
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/dev/GitHub/dotfiles
+dotfiles_repo_local_destination:  ~/Library/Mobile Documents/com~apple~CloudDocs/Git/dotfiles
 dotfiles_files:
   - .bash_profile
+  - .gitconfig
   - .gitignore
   - .inputrc
   - .osx
   - .vimrc
-  - .oh-my-zsh/custom/dev.zsh
+  - .zshrc_custom
+  - .credentials
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf
-  - awscli
-  - bash
-  - bash-completion
-  - bower
-  - cmake
-  - dnsmasq
-  # - doxygen
-  - docker-machine
-  - docker-machine-parallels
-  - gettext
-  - gifsicle
-  - git
-  - git-lfs
-  - highlight
-  - go
-  - gpg
-  # - hub # using lab instead
-  - kubernetes-cli
-  - kubernetes-helm
-  - lab
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
-  - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - ssh-askpass
-  # - cowsay
-  - readline
-  - openssl
-  - pv
-  - wget
-  - wrk
-  - yarn
-  - zsh
-  - zsh-completions
+  # - awscli
+  # - bash
+  # - bash-completion
+  # - bower
+  # - cmake
+  # - dnsmasq
+  # # - doxygen
+  # - docker-machine
+  # - docker-machine-parallels
+  # - gettext
+  # - gifsicle
+  # - git
+  # - git-lfs
+  # - highlight
+  # - go
+  # - gpg
+  # # - hub # using lab instead
+  # - zaquestion/tap/lab
+  # - kubernetes-cli
+  # - kubernetes-helm
+  # - httpie
+  # - iperf
+  # - libevent
+  # - sqlite
+  # - mcrypt
+  # - nmap
+  # - node
+  # - nvm
+  # - php
+  # - ssh-copy-id
+  # # - ssh-askpass
+  # # - cowsay
+  # - readline
+  # - openssl
+  # - pv
+  # - wget
+  # - wrk
+  # - yarn
+  # - zsh
+  # - zsh-completions
 
 homebrew_taps:
   - homebrew/core
@@ -67,80 +69,84 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - 1password
-  - ableton-live-suite
-  - arq
-  - atom
-  - bartender
-  - betterzipql
-  - coconutbattery
-  - chromedriver
-  - dash
-  - disk-inventory-x
-  - docker
-  - docker-toolbox
-  - dropbox
-  - eloston-chromium
-  - firefox
-  - firefoxdeveloperedition
-  - flash-player
-  - gas-mask
-  - gitkraken
-  - google-chrome
-  - google-chrome-canary
-  - gpgtools
-  - grandtotal
-  - imagealpha
-  - imageoptim
-  - java
-  - jetbrains-toolbox
-  - jdownloader
-  - keka
-  - keepingyouawake
-  - libreoffice
-  - little-snitch
-  - macdown
-  - macvim
-  - microsoft-office
-  - micro-snitch
-  - minikube
-  - moneymoney
-  - mosaic
-  - openemu
-  - osxfuse
-  - parallels-desktop
-  - poedit
-  - qlcolorcode
-  - qlimagesize
-  - qlmarkdown
-  - qlprettypatch
-  - qlstephen
-  - qlvideo
-  - quicklook-csv
-  - quicklook-json
-  - quicklookase
-  - sequel-pro
-  - shuttle
-  - sketch
-  - slack
-  - spectacle
-  - spotify
-  - steam
-  - sublime-text
-  - suspicious-package
-  - synology-cloud-station-drive
-  - timings
-  - transmission
-  - transmit
-  - transmit-disk
-  - tunnelblick
-  - ubersicht
-  - vagrant
-  - vagrant-manager
-  - virtualbox
-  - vlc
-  # - wch-ch34x-usb-serial-driver
-  - webpquicklook
+  - iterm2
+  # - cd-to-iterm
+  # - 1password
+  # - ableton-live-suite
+  # - adobe-creative-cloud
+  # - arq
+  # - atom
+  # - bartender
+  # - betterzipql
+  # - coconutbattery
+  # - chromedriver
+  # - dash
+  # - disk-inventory-x
+  # - docker
+  # - dropbox
+  # - eloston-chromium
+  # - fantastical
+  # - firefox
+  # - firefoxdeveloperedition
+  # - flash-player
+  # - gas-mask
+  # - gitkraken
+  # - google-chrome
+  # - google-chrome-canary
+  # - gpgtools
+  # - grandtotal
+  # - imagealpha
+  # - imageoptim
+  # - java
+  # - jetbrains-toolbox
+  # # - jdownloader # broken?
+  # - keka
+  # - keepingyouawake
+  # - libreoffice
+  # - little-snitch
+  # - macdown
+  # - macvim
+  # - microsoft-office
+  # - micro-snitch
+  # - minikube
+  # - moneymoney
+  # - mosaic
+  # - openemu
+  # - osxfuse
+  # - parallels-desktop
+  # - poedit
+  # - qlcolorcode
+  # - qlimagesize
+  # - qlmarkdown
+  # - qlprettypatch
+  # - qlstephen
+  # - qlvideo
+  # - quicklook-csv
+  # - quicklook-json
+  # - quicklookase
+  # - sequel-pro
+  # - shuttle
+  # - sketch
+  # - slack
+  # - spotify
+  # - spideroakone
+  # - steam
+  # - sublime-text
+  # - suspicious-package
+  # - synology-cloud-station-drive
+  # - timings
+  # - transmission
+  # - transmit
+  # - transmit-disk
+  # - tunnelblick
+  # - ubersicht
+  # - vagrant
+  # - vagrant-manager
+  # - virtualbox
+  # - vlc
+  # # - wch-ch34x-usb-serial-driver
+  # - webpquicklook
+  # - docker-toolbox # depends on virtual box
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
@@ -151,8 +157,6 @@ mas_installed_apps:
   - { id: 918858936, name: "Airmail 3 (3.6.41)" }
   # - { id: 1147835434, name: "Install OS X El Capitan (1.7.55)" }
   - { id: 507257563, name: "Sip (4.5.2)" }
-mas_email: ""
-mas_password: ""
 
 osx_script: "sudo ~/.osx --no-restart"
 
@@ -163,12 +167,13 @@ composer_packages: []
   # - name: drush
   #   state: present # present/absent, default: present
   #   version: "^8.1" # default: N/A
-  - name: laravel/installer
+  # - name: laravel/installer
+  #   state: latest
 gem_packages: []
   # - name: bundler
-  #   state: present # present/absent/latest, default: present
+  #   state: latest # present/absent/latest, default: present
   #   version: "~> 1.15.1" # default: N/A
-npm_packages: []
+npm_packages:
   # - name: webpack
   #   state: present # present/absent/latest, default: present
   #   version: "^2.6" # default: N/A
@@ -181,5 +186,13 @@ pip_packages: []
   #   state: present # present/absent/latest, default: present
   #   version: "0.16.3" # default: N/A
 
+dev_tlds:
+  - "docker"
+  - "localhost"
+  - "test"
+  - "example"
+
 # Glob pattern to ansible task files to run after all other tasks are finished.
-post_provision_tasks: post_tasks/*.yml
+post_provision_tasks: 
+  - ./post_tasks/asimov.yml
+  # - ./post_tasks/resolver.yml

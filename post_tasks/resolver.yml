@@ -1,0 +1,40 @@
+---
+# Brew.
+- name: Ensure configured homebrew packages are installed.
+  homebrew:
+    name: dnsmasq
+    state: present
+
+- name: Ensure configure directory
+  sudo: yes
+  file:
+    dest: /usr/local/etc/dnsmasq.d
+    state: directory
+
+- name: Ensure dnsmasq configuration
+  sudo: yes
+  become: yes
+  blockinfile:
+    dest: "/usr/local/etc/dnsmasq.conf"
+    marker: "{{ item }}"
+    block: |
+     address=/.{{ item }}/127.0.0.1
+    state: present
+  with_items: "{{ dev_tlds|default(omit) }}"
+
+- name: Ensure /etc/resolver directory exists.
+  sudo: yes
+  become: yes
+  file:
+    path: /etc/resolver
+    state: directory
+
+- name: "Add resolver for dev TLD '{{ item }}'"
+  sudo: yes
+  become: yes
+  lineinfile:
+    dest: "/etc/resolver/{{ item }}"
+    line: "nameserver 127.0.0.1"
+    create: true
+    state: present
+  with_items: "{{ dev_tlds|default(omit) }}"

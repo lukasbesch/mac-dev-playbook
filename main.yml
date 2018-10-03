@@ -5,6 +5,14 @@
   vars_files:
     - default.config.yml
 
+  vars_prompt:
+    - name: "mas_email"
+      prompt: "Enter Mac App Store E-Mail"
+      private: no
+    - name: "mas_password"
+      prompt: "Enter Mac App Store Password"
+      private: yes
+
   pre_tasks:
     - include_vars: "{{ item }}"
       with_fileglob:
@@ -37,8 +45,13 @@
     - include_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
 
+    - include_tasks: post_tasks/resolver.yml
+      tags: ['resolver']
+
+
     - name: Run configured post-provision ansible task files.
       include_tasks: "{{ outer_item }}"
       loop_control:
         loop_var: outer_item
       with_fileglob: "{{ post_provision_tasks|default(omit) }}"
+      tags: ['post-provision']
