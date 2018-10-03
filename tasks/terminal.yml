@@ -29,11 +29,3 @@
   git:
     repo=https://github.com/robbyrussell/oh-my-zsh
     dest=~/.oh-my-zsh
-  sudo: no
-
-# - name: Ensure .nvm directory exists
-#   file:
-#     path: $HOME/.nvm
-#     state: directory
-# - name: Installing nvm
-#   shell: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
