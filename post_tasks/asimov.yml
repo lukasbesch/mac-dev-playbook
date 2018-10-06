@@ -3,5 +3,7 @@
   git:
     repo: https://github.com/stevegrunwell/asimov.git
     dest: /usr/local/etc/asimov
+  register: asimov
 - name: Run Asimov installer
   shell: /usr/local/etc/asimov/install.sh
+  when: asimov.changed
