@@ -200,3 +200,4 @@ dnsmasq_resolver:
 post_provision_tasks: 
   - ./post_tasks/asimov.yml
   # - ./post_tasks/resolver.yml
+  - ./post_tasks/vagrant.yml

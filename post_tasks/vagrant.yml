@@ -1,0 +1,14 @@
+---
+# Brew.
+- name: Ensure Vagrant is installed.
+  homebrew_cask:
+    name: vagrant
+    state: present
+
+- name: Ensure Parallels is installed.
+  homebrew_cask:
+    name: parallels
+    state: present
+
+- name: Install Vagrant plugin vagrant-parallels
+  command: vagrant plugin install vagrant-parallels
