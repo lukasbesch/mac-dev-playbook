@@ -188,11 +188,13 @@ pip_packages: []
   #   state: present # present/absent/latest, default: present
   #   version: "0.16.3" # default: N/A
 
-dev_tlds:
-  - "docker"
-  - "localhost"
-  - "test"
-  - "example"
+dnsmasq_resolver:
+  - docker
+  - localhost
+  - test
+  - example
+  - tld: homestead
+    ip: 192.168.10.10
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: 

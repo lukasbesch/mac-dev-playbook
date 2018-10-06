@@ -16,11 +16,17 @@
   become: yes
   blockinfile:
     dest: "/usr/local/etc/dnsmasq.conf"
-    marker: "{{ item }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK dev_tld {{ item.tld|default(item) }}"
     block: |
-     address=/.{{ item }}/127.0.0.1
+     address=/.{{ item.tld|default(item) }}/{{ item.ip|default("127.0.0.1") }}
     state: present
-  with_items: "{{ dev_tlds|default(omit) }}"
+  with_items: "{{ dnsmasq_resolver|default(omit) }}"
+
+# - name: "Ensure brew services is available'"
+#   shell: "brew services"
+
+- name: "Restart dnsmasq'"
+  shell: "brew services restart dnsmasq"
 
 - name: Ensure /etc/resolver directory exists.
   sudo: yes
@@ -29,12 +35,12 @@
     path: /etc/resolver
     state: directory
 
-- name: "Add resolver for dev TLD '{{ item }}'"
+- name: "Add resolver for TLD '{{ item.tld|default(item) }}'"
   sudo: yes
   become: yes
   lineinfile:
-    dest: "/etc/resolver/{{ item }}"
+    dest: "/etc/resolver/{{ item.tld|default(item) }}"
     line: "nameserver 127.0.0.1"
     create: true
     state: present
-  with_items: "{{ dev_tlds|default(omit) }}"
+  with_items: "{{ dnsmasq_resolver|default(omit) }}"
