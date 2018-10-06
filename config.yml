@@ -22,46 +22,47 @@ dotfiles_files:
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf
-  # - awscli
-  # - bash
-  # - bash-completion
-  # - bower
-  # - cmake
-  # - dnsmasq
-  # # - doxygen
-  # - docker-machine
-  # - docker-machine-parallels
-  # - gettext
-  # - gifsicle
-  # - git
-  # - git-lfs
-  # - highlight
-  # - go
-  # - gpg
-  # # - hub # using lab instead
-  # - zaquestion/tap/lab
-  # - kubernetes-cli
-  # - kubernetes-helm
-  # - httpie
-  # - iperf
-  # - libevent
-  # - sqlite
-  # - mcrypt
-  # - nmap
-  # - node
-  # - nvm
-  # - php
-  # - ssh-copy-id
-  # # - ssh-askpass
-  # # - cowsay
-  # - readline
-  # - openssl
-  # - pv
-  # - wget
-  # - wrk
-  # - yarn
-  # - zsh
-  # - zsh-completions
+  - awscli
+  - bash
+  - bash-completion
+  - bower
+  - cmake
+  - composer
+  - dnsmasq
+  # - doxygen
+  - docker-machine
+  - docker-machine-parallels
+  - gettext
+  - gifsicle
+  - git
+  - git-lfs
+  - highlight
+  - go
+  - gpg
+  # - hub # using lab instead
+  - zaquestion/tap/lab
+  - kubernetes-cli
+  - kubernetes-helm
+  - httpie
+  - iperf
+  - libevent
+  - sqlite
+  - mcrypt
+  - nmap
+  - node
+  - nvm
+  - php
+  - ssh-copy-id
+  # - ssh-askpass
+  # - cowsay
+  - readline
+  - openssl
+  - pv
+  - wget
+  - wrk
+  - yarn
+  - zsh
+  - zsh-completions
 
 homebrew_taps:
   - homebrew/core
@@ -74,6 +75,7 @@ homebrew_cask_apps:
   # - 1password
   # - ableton-live-suite
   # - adobe-creative-cloud
+  # - aerial
   # - arq
   # - atom
   # - bartender
@@ -113,7 +115,7 @@ homebrew_cask_apps:
   # - mosaic
   # - openemu
   # - osxfuse
-  # - parallels-desktop
+  # - parallels
   # - poedit
   # - qlcolorcode
   # - qlimagesize
