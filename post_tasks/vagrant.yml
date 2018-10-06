@@ -10,5 +10,6 @@
     name: parallels
     state: present
 
-- name: Install Vagrant plugin vagrant-parallels
-  command: vagrant plugin install vagrant-parallels
+- name: Installing Vagrant plugins
+  command: vagrant plugin install {{ item }}
+  with_items: "{{ vagrant_plugins|default(omit) }}"

@@ -1,6 +1,6 @@
 ---
 # Brew.
-- name: Ensure configured homebrew packages are installed.
+- name: Ensure dnsmasq is installed.
   homebrew:
     name: dnsmasq
     state: present
@@ -25,7 +25,7 @@
 # - name: "Ensure brew services is available'"
 #   shell: "brew services"
 
-- name: "Restart dnsmasq'"
+- name: "Restart dnsmasq"
   shell: "brew services restart dnsmasq"
 
 - name: Ensure /etc/resolver directory exists.

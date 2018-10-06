@@ -196,6 +196,9 @@ dnsmasq_resolver:
   - tld: homestead
     ip: 192.168.10.10
 
+vagrant_plugins:
+  - vagrant-parallels
+
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: 
   - ./post_tasks/asimov.yml
